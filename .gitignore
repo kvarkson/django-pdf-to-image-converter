@@ -2,3 +2,7 @@
 *.pot
 *.pyc
 local_settings.py
+*.pdf
+*.png
+*.jpg
+*.jpeg

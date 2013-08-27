@@ -6,6 +6,8 @@ The app is solving the following issues:
 2. Convert the file to series of images (for each page)
 3. Compress the images to an archive.
 
+Inspired by [minimal-django-file-upload-example](https://github.com/doph/minimal-django-file-upload-example)
+
 #Install
 You are going to need to install the following dependencies:
 
@@ -16,7 +18,7 @@ You are going to need to install the following dependencies:
 
 #Usage
 
-Just <code> python manage.py runserver</code> and be happy.
+Just <code>python manage.py runserver</code> and be happy.
 
 #License
 The MIT License

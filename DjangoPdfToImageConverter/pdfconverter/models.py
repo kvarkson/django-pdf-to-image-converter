@@ -1,3 +1,4 @@
 from django.db import models
 
-# Create your models here.
+class PdfFile(models.Model):
+    pdf_file = models.FileField(upload_to='pdfs/%Y/%m/%d')
