@@ -1,10 +1,11 @@
 django-pdf-to-image-converter
 =============================
 
-The app is solving the following issues:
+####The app is solving the following issues:
+
 1. Upload a pdf file
 2. Convert the file to series of images (for each page)
-3. Compress the images to an archive.
+3. Compress the images to an archive
 
 Inspired by [minimal-django-file-upload-example](https://github.com/doph/minimal-django-file-upload-example)
 
