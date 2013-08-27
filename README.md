@@ -12,10 +12,11 @@ Inspired by [minimal-django-file-upload-example](https://github.com/doph/minimal
 #Install
 You are going to need to install the following dependencies:
 
-1. [Ghostscript](http://www.ghostscript.com) (if you do not have one installed)
-2. [Freetype](http://www.freetype.org) (it should be on your system but you better check)
-3. Django: <code>pip install django</code>
-4. Wand (python bind for ImageMagic): <code>pip install wand</code>
+1. [ImageMagic](http://www.imagemagick.org/script/index.php)
+2. [Ghostscript](http://www.ghostscript.com) (if you do not have one installed)
+3. [Freetype](http://www.freetype.org) (it should be on your system but you better check)
+4. Django: <code>pip install django</code>
+5. Wand (python bind for ImageMagic): <code>pip install wand</code>
 
 #Usage
 
