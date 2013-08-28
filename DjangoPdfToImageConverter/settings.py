@@ -54,8 +54,12 @@ USE_TZ = True
 # Example: "/var/www/example.com/media/"
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
 
-# Here you can enable your pdf folder
-PDF_OUTPUT_FILES = os.path.join(MEDIA_ROOT, 'pdfs')
+# Here you can enable your pdf folder. It will be in media folder
+PDF_OUTPUT_FILES_URL = 'pdfs'
+
+PDF_OUTPUT_FILES = os.path.join(MEDIA_ROOT, PDF_OUTPUT_FILES_URL)
+
+
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.

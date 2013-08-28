@@ -21,7 +21,10 @@ You are going to need to install the following dependencies:
 
 #Usage
 
-Just <code>python manage.py runserver</code> and be happy.
+Just got to terminal and run:
+<code>python manage.py syncdb</code>
+and
+<code>python manage.py runserver</code> and be happy.
 
 #License
 The MIT License

@@ -12,7 +12,7 @@ from DjangoPdfToImageConverter.pdfconverter.extra import ContentTypeRestrictedFi
 
 def make_upload_path(instance, filename):
 	"""Generates upload path for FileField"""
-	return settings.PDF_OUTPUT_FILES + "/%s" % (filename)
+	return settings.PDF_OUTPUT_FILES_URL + "/%s" % (filename)
 
 
 class PdfFile(models.Model):
@@ -30,11 +30,11 @@ class PdfFile(models.Model):
 
     def __convert_to_img__(self, format='jpg'):
     	filename = self.pdf_file.name
-    	filepath = self.pdf_file.url
+    	filepath = settings.MEDIA_ROOT + '/' + filename
     	output_dir = filepath + '_' + format + '/'
     	os.mkdir(output_dir)
     	
-    	input_file = PdfFileReader(file(filename, 'rb'))
+    	input_file = PdfFileReader(file(filepath, 'rb'))
     	for i in range(input_file.getNumPages()):
 			with Image(filename = filepath + '[' + str(i) + ']') as img:
 				img.format = format
