@@ -17,6 +17,7 @@ You are going to need to install the following dependencies:
 3. [Freetype](http://www.freetype.org) (it should be on your system but you better check)
 4. Django: <code>pip install django</code>
 5. Wand (python bind for ImageMagic): <code>pip install wand</code>
+6. PyPDF2: <code>pip install PyPDF2</code>
 
 #Usage
 

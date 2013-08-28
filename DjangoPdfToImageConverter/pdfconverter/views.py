@@ -13,6 +13,7 @@ def index(request):
         if form.is_valid():
             new_pdf = PdfFile(pdf_file = request.FILES['pdf_file'])
             new_pdf.save()
+            new_pdf.convert_to_img()
 
             return HttpResponseRedirect(reverse('DjangoPdfToImageConverter.pdfconverter.views.index'))
     else:
