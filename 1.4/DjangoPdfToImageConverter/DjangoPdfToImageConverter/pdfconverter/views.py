@@ -14,7 +14,9 @@ def index(request):
         if form.is_valid():
             new_pdf = PdfFile(pdf_file = request.FILES['pdf_file'])
             new_pdf.save()
+            # convert to png file after uploading
             new_pdf.convert_to_png()
+            # convert to jpg file after uploading
             new_pdf.convert_to_jpg()
 
             return HttpResponseRedirect(reverse('DjangoPdfToImageConverter.pdfconverter.views.index'))
