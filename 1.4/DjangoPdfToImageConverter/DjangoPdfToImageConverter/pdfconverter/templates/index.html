@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Pdf To Image Converter</title>	
+	</head>
+
+	<body>
+		{% if pdf_files %}
+			<ul>
+			{% for pdf_file in pdf_files %}
+				<li><a href="{{ pdf_file.pdf_file.url }}">{{ pdf_file.pdf_file.name }}</a></li>
+			{% endfor %}
+			</ul>
+		{% else %}
+			<p>No pdf_files.</p>
+		{% endif %}
+
+		<!-- Upload form. Note enctype attribute! -->
+		<form action="{% url "index" %}" method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			<p>{{ form.non_field_errors }}</p>
+			<p>{{ form.pdf_file.label_tag }} {{ form.pdf_file.help_text }}</p>
+			<p>
+				{{ form.pdf_file.errors }}
+				{{ form.pdf_file }}
+			</p>
+			<p><input type="submit" value="Upload" /></p>
+		</form>
+
+	</body>
+
+</html> 
