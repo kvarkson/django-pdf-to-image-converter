@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.http import HttpResponseRedirect
@@ -13,7 +14,8 @@ def index(request):
         if form.is_valid():
             new_pdf = PdfFile(pdf_file = request.FILES['pdf_file'])
             new_pdf.save()
-            new_pdf.convert_to_img()
+            new_pdf.convert_to_png()
+            new_pdf.convert_to_jpg()
 
             return HttpResponseRedirect(reverse('DjangoPdfToImageConverter.pdfconverter.views.index'))
     else:
