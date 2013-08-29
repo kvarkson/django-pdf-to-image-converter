@@ -26,6 +26,8 @@ Just got to terminal and run:
 and
 <code>python manage.py runserver</code> and be happy.
 
+In you <code>views.py</code> when the FileField has been saved you just neet to call <code><your_entity>.convert_to_png()</code> or <code><your_entity>.convert_to_jpg()</code>. If you need to resize the images just pass the width and height parameters like: <code><your_entity>.convert_to_png(200, 400)</code>. This call will create the images 200x400px.
+
 #License
 The MIT License
 

@@ -14,8 +14,17 @@ def index(request):
         if form.is_valid():
             new_pdf = PdfFile(pdf_file = request.FILES['pdf_file'])
             new_pdf.save()
-            new_pdf.convert_to_png()
+
+            # convert to jpg file after uploading
+            # if you don't pass parameters then the images
+            # will have the actual size
             new_pdf.convert_to_jpg()
+
+            # convert to png file after uploading
+            # if you need to resize the image just call specify it's size
+            # like new_pdf.convert_to_png(200, 400) 
+            # will return 200x400 px image
+            new_pdf.convert_to_png(200, 400)
 
             return HttpResponseRedirect(reverse('DjangoPdfToImageConverter.pdfconverter.views.index'))
     else:
